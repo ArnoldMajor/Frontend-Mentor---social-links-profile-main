@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    --ff-Inter: "Inter";
+    --fw-light: 400;
+    --fw-medium: 600;
+    --fw-bold: 700;
+    --clr-green: hsl(75, 94%, 57%);
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-grey: hsl(0, 0%, 20%);
+    --clr-dark-grey: hsl(0, 0%, 12%);
+    --clr-off-black: hsl(0, 0%, 8%);
+}
+
+body{
+    display: flex;
+    background-color: var(--clr-off-black);
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    background-color: var(--clr-dark-grey);
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    align-items: center;
+    font-family: var(--ff-Inter);
+    text-align: center;
+}
+
+.photo {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.photo img{
+    border: none;
+    border-radius: 100%;
+    height: 70px;
+}
+
+.name {
+    color: var(--clr-white);
+    font-weight: var(--fw-medium);
+    padding-bottom: 5px;
+    font-size: 1.25rem;
+}
+
+.location {
+    color: var(--clr-green);
+    font-weight: var(--fw-medium);
+    font-size: 0.75rem;
+    padding-bottom: 20px;
+}
+
+.bio {
+    color: var(--clr-white);
+    font-weight: var(--fw-light);
+    font-size: 0.75rem;
+    padding-bottom: 5px;
+}
+
+.buttons li{
+    display: grid;
+    grid-auto-flow: row;
+    list-style: none;
+    margin: 15px;
+}
+
+button {
+    font-weight: var(--fw-medium);
+    background-color: var(--clr-grey);
+    color: var(--clr-white);
+    border: none;
+    border-radius: 5px;
+    padding-inline: 80px;
+    padding-block: 12px;
+    min-width: 100%;
+}
+
+button:hover{
+    background-color: var(--clr-green);
+    color: var(--clr-dark-grey);
+    cursor: pointer;
+}
+
+@media (max-width: 400px) {
+    main {
+        padding-inline: 10px;
+        padding-bottom: 10px;
+    }
+
+    button {
+        padding-inline: 60px;
+    }
+}
